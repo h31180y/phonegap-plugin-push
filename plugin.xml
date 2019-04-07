@@ -54,9 +54,11 @@
       </service>
       <service android:name="com.adobe.phonegap.push.RegistrationIntentService" android:exported="false"/>
     </config-file>
+    <preference name="ANDROID_SUPPORT_V13_VERSION" default="26.+"/>
+    <preference name="ANDROID_PLAY_SERVICES_GCM_VERSION" default="15.+"/>
     <framework src="push.gradle" custom="true" type="gradleReference"/>
-    <framework src="com.android.support:support-v13:24+"/>
-    <framework src="com.google.android.gms:play-services-gcm:15+"/>
+    <framework src="com.android.support:support-v13:$ANDROID_SUPPORT_V13_VERSION"/>
+    <framework src="com.google.android.gms:play-services-gcm:$ANDROID_PLAY_SERVICES_GCM_VERSION"/>
     <framework src="me.leolin:ShortcutBadger:1.1.14@aar"/>
     <source-file src="src/android/com/adobe/phonegap/push/GCMIntentService.java" target-dir="src/com/adobe/phonegap/push/"/>
     <source-file src="src/android/com/adobe/phonegap/push/PushConstants.java" target-dir="src/com/adobe/phonegap/push/"/>
